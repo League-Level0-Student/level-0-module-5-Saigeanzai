@@ -18,7 +18,7 @@ for(int i=2; i<number; i++) {
 }
 JOptionPane.showMessageDialog(null, "the number is prime");	  
 	
-	
+
 	
 	
 	
