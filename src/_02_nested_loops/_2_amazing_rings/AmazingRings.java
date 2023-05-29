@@ -54,7 +54,7 @@ public class AmazingRings extends PApplet {
 
     @Override
     public void draw() {
-
+    	
     }
 
     static public void main(String[] args) {
