@@ -60,7 +60,7 @@ while (j < 4) {
 				
 			
 			// #14. set the pen color to black
-	
+	rob.setPenColor(0,0,0);
 }	
 		
 	}
