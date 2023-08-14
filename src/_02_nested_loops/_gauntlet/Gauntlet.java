@@ -5,9 +5,29 @@ import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
 
 public class Gauntlet {
 	public static void main(String[] args) {
-		for (int i = 0; i<13; ++i) {
-		System.out.println(" in " + (2023 - 12 +i) + " I was " + i + " years old");
-		}
+		for(int row = 0; row<3; ++row) {
+			for(int col = 1; col<4; ++col) {
+				System.out.print((col + (row*3)+ " "));
+			}System.out.println();
+		} 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 }
