@@ -32,20 +32,28 @@ public class HappyPet {
 		// pet happy
 		// (eg: cuddle, food, water, take a walk, groom, clean up poop).
 		// Make sure to customize the title and question too.
-		task = JOptionPane.showOptionDialog(null, "what do you want to do to make your pet happy?", "question", 0,
-				JOptionPane.INFORMATION_MESSAGE, null,
-				new String[] { "cuddle", "food", "water", "pet", "clean up poop", }, null);
+		for (int i = 0; i < 6; i++) {
+			task = JOptionPane.showOptionDialog(null, "what do you want to do to make your pet happy?", "question", 0,
+					JOptionPane.INFORMATION_MESSAGE, null,
+					new String[] { "cuddle", "food", "water", "pet", "clean up poop", }, null);
 
-		// 6. Use user input to call the appropriate method created in step 5 below.
+			// 6. Use user input to call the appropriate method created in step 5 below.
 
-		if (pet.equals("cat")) {
-			catInteraction();
-		}
-		if(pet.equals("dog")) {
-			dogInteraction();
-		}
-		if (petHappiness <= 0) {
-			lovePet();
+			if (pet.equals("cat")) {
+				catInteraction();
+			}
+			if (pet.equals("dog")) {
+				dogInteraction();
+			}
+			if (pet.equals("hamster")) {
+				hamsterInteraction();
+			}
+			if (pet.equals("bird")) {
+				birdInteraction();
+			}
+			if (happinessLevel == 100) {
+				lovePet();
+			}
 		}
 		// 7. If you determine the happiness level is large enough, tell the
 		// user that he loves his pet and use break; to exit for loop.
@@ -56,6 +64,7 @@ public class HappyPet {
 	// purr when pet),
 	// and INCREMENT the pet's happiness Level.
 	static void catInteraction() {
+
 		if (task == 3) {
 			JOptionPane.showMessageDialog(null, "The cat purrs");
 			happinessLevel = tank.nextInt(20);
@@ -79,13 +88,14 @@ public class HappyPet {
 			happinessLevel = tank.nextInt(20);
 		}
 	}
+
 	static void dogInteraction() {
 		if (task == 3) {
 			JOptionPane.showMessageDialog(null, "The dog licks you");
 			happinessLevel = tank.nextInt(20);
 		}
 		if (task == 2) {
-			JOptionPane.showMessageDialog(null, "The dog drank the water gratefully");
+			JOptionPane.showMessageDialog(null, "The dog drank the water ");
 			happinessLevel = tank.nextInt(20);
 		}
 
@@ -103,13 +113,14 @@ public class HappyPet {
 			happinessLevel = tank.nextInt(20);
 		}
 	}
+
 	static void hamsterInteraction() {
 		if (task == 3) {
-			JOptionPane.showMessageDialog(null, "The hamster lays in your hand");
+			JOptionPane.showMessageDialog(null, "The hamster smiles");
 			happinessLevel = tank.nextInt(20);
 		}
 		if (task == 2) {
-			JOptionPane.showMessageDialog(null, "The hamster drinks the water quickly");
+			JOptionPane.showMessageDialog(null, "The hamster drinks the water ");
 			happinessLevel = tank.nextInt(20);
 		}
 
@@ -124,6 +135,31 @@ public class HappyPet {
 		}
 		if (task == 4) {
 			JOptionPane.showMessageDialog(null, "The hamster feels relieved");
+			happinessLevel = tank.nextInt(20);
+		}
+	}
+
+	static void birdInteraction() {
+		if (task == 3) {
+			JOptionPane.showMessageDialog(null, "The bird feels happy");
+			happinessLevel = tank.nextInt(20);
+		}
+		if (task == 2) {
+			JOptionPane.showMessageDialog(null, "The bird drinks some of the water");
+			happinessLevel = tank.nextInt(20);
+		}
+
+		if (task == 1) {
+			JOptionPane.showMessageDialog(null, "The bird eats the food");
+			happinessLevel = tank.nextInt(20);
+
+		}
+		if (task == 0) {
+			JOptionPane.showMessageDialog(null, "The bird pokes you");
+			happinessLevel = tank.nextInt(20);
+		}
+		if (task == 4) {
+			JOptionPane.showMessageDialog(null, "The bird dances around");
 			happinessLevel = tank.nextInt(20);
 		}
 	}
