@@ -43,7 +43,9 @@ void skill2() {
 	}
 
 	void skill5() {
-
+String school = JOptionPane.showInputDialog("What's the name of the school you go to?");{
+	JOptionPane.showMessageDialog(null, school + "is the fantastic school");
+}
 	}
 
 }
