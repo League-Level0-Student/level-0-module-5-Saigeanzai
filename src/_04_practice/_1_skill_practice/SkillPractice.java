@@ -8,7 +8,7 @@ public class SkillPractice {
 		SkillPractice skills = new SkillPractice();
 		skills.skill1();
 		skills.skill2();
-		skills.skill3();
+		
 		skills.skill4();
 		skills.skill5();
 	}
@@ -29,22 +29,32 @@ void skill2() {
 		System.out.println(i);
 	}
 
-		
-	
-
 }
 
-	void skill3() {
-
-	}
-
 	void skill4() {
-
+String city = JOptionPane.showInputDialog("which city do you live in?");
+if (city.equals("San Diego")) {
+	JOptionPane.showMessageDialog(null, "You live in America's Finest City");
+}
+else {
+	JOptionPane.showMessageDialog(null, "move to San Diego");
+}
+String cars = JOptionPane.showInputDialog("How many cars does your family own");
+int numberCars = Integer.parseInt(cars);
+if (numberCars<1) {
+	JOptionPane.showMessageDialog(null, "I bet you use public transportation");
+}
+if (numberCars==1) {
+	System.out.println("Toyota Prius");
+}
+if (numberCars>1) {
+	JOptionPane.showMessageDialog(null, "four");
+}
 	}
 
 	void skill5() {
 String school = JOptionPane.showInputDialog("What's the name of the school you go to?");{
-	JOptionPane.showMessageDialog(null, school + "is the fantastic school");
+	JOptionPane.showMessageDialog(null, school + " is the fantastic school");
 }
 	}
 
